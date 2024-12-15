@@ -23,7 +23,6 @@ body {
   left: 0;
   width: 100%;
   height: 60px;
-  /* 기존 스타일 */
   color: white;
   display: flex;
   justify-content: space-between;
@@ -32,6 +31,7 @@ body {
   margin: 3px 0;
   z-index: 1000;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  background-image: url('assets/bg.jpg');
   
   /* 상단과 하단에 노란색 2중선 테두리 추가 */
   border-top: 4px double #FFD700;
@@ -117,7 +117,7 @@ body {
 }
 
 .menu-details {
-  width: 60%; /* 너비를 60%로 변경 */
+  width: 50%; /* 너비를 60%로 변경 */
   padding: 0 10px;
   display: flex;
   flex-direction: column;
@@ -137,7 +137,7 @@ body {
 }
 
 .menu-price {
-  width: 30%; /* 너비를 추가 */
+  width: 15%; /* 너비를 추가 */
   text-align: right;
   font-size: 1em;
   color: #ffffff;
@@ -175,7 +175,7 @@ body {
   }
 
   .menu-price {
-    flex: 0 0 20%; /* 너비를 20%로 조정 */
+    flex: 0 0 15%; /* 너비를 20%로 조정 */
     font-size: 0.9em; /* 폰트 크기 줄이기 */
     text-align: right;
     align-items: flex-end; /* 오른쪽 정렬 유지 */
