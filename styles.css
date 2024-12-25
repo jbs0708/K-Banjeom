@@ -14,6 +14,7 @@ body {
   background-position: center; /* 배경 이미지의 위치를 중앙으로 설정 */
   background-repeat: no-repeat; /* 배경 이미지가 반복되지 않도록 설정 */
   background-attachment: fixed; /* 배경 이미지가 스크롤과 함께 고정되도록 설정 */
+  border-bottom: 2px solid #FFD700;
 }
 
 /* 고정 헤더 바 스타일 */
@@ -28,7 +29,7 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 0 10px;
-  margin: 3px 0;
+  margin: 1px 0;
   z-index: 1000;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
   background-image: url('assets/bg.jpg');
@@ -109,15 +110,18 @@ body {
 }
 
 .menu-image {
-  width: 30%;
+  width: 100%; /* 부모 컨테이너의 너비에 맞춤 */
+  height: auto; /* 높이는 자동으로 비율 유지 */
+  max-width: 300px; /* 원하는 최대 너비 설정 */
+  max-height: 200px; /* 원하는 최대 높이 설정 */
   border-radius: 8px;
-  object-fit: cover;
+  object-fit: contain; /* 이미지가 잘리지 않고 전체가 보이도록 설정 */
   margin-right: 3px;
   align-self: center;
 }
 
 .menu-details {
-  width: 50%; /* 너비를 60%로 변경 */
+  width: 50%; /* 너비를 50%로 설정 */
   padding: 0 10px;
   display: flex;
   flex-direction: column;
@@ -137,7 +141,7 @@ body {
 }
 
 .menu-price {
-  width: 15%; /* 너비를 추가 */
+  width: 15%; /* 너비를 15%로 설정 */
   text-align: right;
   font-size: 1em;
   color: #ffffff;
@@ -166,8 +170,10 @@ body {
   }
 
   .menu-image {
-    flex: 0 0 30%;
+    width: 100%; /* 전체 너비 사용 */
     max-width: 100px; /* 이미지 크기 줄이기 */
+    height: auto; /* 높이는 자동으로 비율 유지 */
+    object-fit: contain; /* 이미지가 잘리지 않도록 설정 */
   }
 
   .menu-details {
@@ -175,7 +181,7 @@ body {
   }
 
   .menu-price {
-    flex: 0 0 15%; /* 너비를 20%로 조정 */
+    flex: 0 0 15%; /* 너비를 15%로 조정 */
     font-size: 0.9em; /* 폰트 크기 줄이기 */
     text-align: right;
     align-items: flex-end; /* 오른쪽 정렬 유지 */
